@@ -1,0 +1,12 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+vendor/
+.vendor.*
+dist/
+*.neko-plugin
+*.neko-bundle
+plugin.toml.lock
+plugin.meta.json
+store.db

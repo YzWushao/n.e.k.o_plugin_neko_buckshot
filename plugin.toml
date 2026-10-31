@@ -1,0 +1,27 @@
+[plugin]
+id = "neko_buckshot"
+name = "恶魔轮盘赌陪玩"
+type = "plugin"
+version = "0.1.0"
+entry = "plugin.plugins.neko_buckshot:BuckshotPlugin"
+description = "Buckshot Roulette 普通单机与联机原版陪玩。关闭接管时分析概率、道具组合与建议；开启接管后猫娘自行点击操作。"
+short_description = "恶魔轮盘赌：实时分析或接管赌局"
+keywords = ["[Bb]uckshot", "恶魔轮盘", "接管赌局", "轮盘赌"]
+
+[plugin.author]
+name = "YzWushao"
+
+[plugin.sdk]
+recommended = ">=0.1.0,<0.2.0"
+supported = ">=0.1.0,<0.3.0"
+
+[plugin.ui]
+enabled = true
+
+[[plugin.ui.panel]]
+id = "main"
+title = "赌局陪玩"
+entry = "ui/panel.tsx"
+context = "dashboard"
+permissions = ["state:read", "action:call"]
+

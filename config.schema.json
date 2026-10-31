@@ -1,0 +1,16 @@
+{
+  "type": "object",
+  "properties": {
+    "buckshot": {
+      "type": "object",
+      "title": "恶魔轮盘赌陪玩",
+      "properties": {
+        "game_exe": {"type": "string", "title": "游戏程序完整路径"},
+        "capture_interval_seconds": {"type": "number", "title": "画面采样间隔（秒）", "minimum": 1, "maximum": 10},
+        "analysis_interval_seconds": {"type": "number", "title": "分析间隔（秒）", "minimum": 3, "maximum": 60},
+        "frame_max_age_seconds": {"type": "number", "title": "操作画面有效期（秒）", "minimum": 5, "maximum": 30},
+        "session_minutes": {"type": "number", "title": "单次陪玩时限（分钟）", "minimum": 1, "maximum": 240}
+      }
+    }
+  }
+}

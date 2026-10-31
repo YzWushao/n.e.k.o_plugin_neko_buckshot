@@ -1,0 +1,13 @@
+[project]
+name = "neko-buckshot"
+version = "0.1.0"
+description = "N.E.K.O Buckshot Roulette companion"
+requires-python = ">=3.11,<3.13"
+dependencies = ["N.E.K.O>=0.9.1"]
+
+[project.optional-dependencies]
+dev = ["Pillow>=10.4,<13", "pytest>=8", "ruff==0.12.4"]
+
+[tool.neko.build]
+include = ["__init__.py", "buckshot/**", "ui/**", "plugin.toml", "pyproject.toml", "config.example.toml", "config.schema.json", "README.md"]
+exclude_dirs = ["tests", "vendor"]
