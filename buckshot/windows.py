@@ -262,7 +262,12 @@ def focus(hwnd: int) -> None:
 
 def _bitmap_image(hwnd: int, width: int, height: int, render_full: bool):
     """Read a game-owned DC, or ask that game window to render to an offscreen DC."""
-    from PIL import Image
+    try:
+        from PIL import Image
+    except ImportError as exc:
+        raise GameWindowError(
+            "当前 N.E.K.O 宿主缺少可用的 Pillow 图像库，请使用自带 Pillow 的 Windows 桌面版 N.E.K.O 0.9.1 或兼容版本。"
+        ) from exc
 
     user, _, gdi = _api()
     if width < 100 or height < 100 or width * height > 80_000_000:
